@@ -3,12 +3,12 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 //import {seedDatabase} from '../seed'
 const config ={
-apiKey:import.meta.env.API_KEY,
-authDomain: import.meta.env.AUTH_DOMAIN,
-projectId: import.meta.env.PROJECT_ID,
-storageBucket: import.meta.env.STORAGE_BUCKET,
-messagingSenderId: import.meta.env.MESSAGING_SENDER_ID,
-appId: import.meta.env.APP_ID
+apiKey:"AIzaSyAzmYJUZhiahy80aCpOQ8BvpKQPzSMJKiM",
+authDomain: "instagram-2d22b.firebaseapp.com",
+projectId: "instagram-2d22b",
+storageBucket: "instagram-2d22b.appspot.com",
+messagingSenderId: "704054239658",
+appId: "1:704054239658:web:002efa421885ec1191cbd3"
 };
 const firebase = Firebase.initializeApp(config);
 const FieldValue = Firebase.firestore;
