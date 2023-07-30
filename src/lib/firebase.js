@@ -11,9 +11,9 @@ messagingSenderId: "704054239658",
 appId: "1:704054239658:web:002efa421885ec1191cbd3"
 };
 const firebase = Firebase.initializeApp(config);
-const FieldValue = firebase.firestore.FieldValue;
+
 
 
 
 //seedDatabase(firebase);
-export {firebase,FieldValue};
+export {firebase};

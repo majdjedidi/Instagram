@@ -1,5 +1,5 @@
 
-import { firebase,FieldValue} from '../lib/firebase';
+import { firebase} from '../lib/firebase';
 import {arrayUnion, arrayRemove } from "firebase/firestore";
 export async function doesUsernameExist(username) {
   const result = await firebase
@@ -50,7 +50,6 @@ export async function getPhotos(userId, following) {
     ...photo.data(),
     docId: photo.id
   }));
-console.log(userFollowedPhotos)
   const photosWithUserDetails = await Promise.all(
     userFollowedPhotos.map(async (photo) => {
       let userLikedPhoto = false;
