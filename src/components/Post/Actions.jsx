@@ -6,25 +6,27 @@ export default function Actions({
   docId,
   totalLikes,
   likedPhoto,
-  handleFocus,
+  handleFocus
 }) {
   const {
-    user: { uid: userId = "" },
+    user: { uid: userId = '' },
   } = useContext(UserContext);
   const {firebase} = useContext(FirebaseContext);
   const [toggleLiked, setToggleLiked] = useState(likedPhoto);
   const [likes, setLikes] = useState(totalLikes);
   const handleToggleLiked = async () => {
     setToggleLiked((toggleLiked) => !toggleLiked);
+  
     await firebase
       .firestore()
-      .collection("photos")
+      .collection('photos')
       .doc(docId)
       .update({
-        likes: toggleLiked ? arrayRemove(userId) : arrayUnion(userId),
+        likes: toggleLiked ? arrayRemove(userId) : arrayUnion(userId)
       });
-    setLikes((likes)=>(toggleLiked ? likes-1 : likes+1))
-  }
+
+    setLikes((likes) => (toggleLiked ? likes - 1 : likes + 1));
+  };
   return (
   <>
   <div className=" flex justify-between p-4">
