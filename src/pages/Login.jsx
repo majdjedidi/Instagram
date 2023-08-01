@@ -14,6 +14,7 @@ const handleLogin = async(event)=>{
   try {
       await firebase.auth().signInWithEmailAndPassword(emailAddress,password)
       navigate(ROUTES.DASHBOARD)
+      console.log('logged in')
   }catch(error){
     setEmailAddress('');
     setPassword('');

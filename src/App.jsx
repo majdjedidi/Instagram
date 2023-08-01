@@ -10,6 +10,7 @@ function App() {
   const Signup = lazy(() => import("./pages/Signup"));
   const NotFound = lazy(() => import("./pages/NotFound"));
   const Dashboard = lazy(() => import("./pages/Dashboard"));
+  const Profile = lazy(() => import("./pages/Profile"));
   return (
     <UserContext.Provider value={{ user }}>
       <Router>
@@ -19,6 +20,7 @@ function App() {
             <Route path={ROUTES.SIGN_UP} Component={Signup} />
             <Route path={ROUTES.DASHBOARD} Component={Dashboard} />
             <Route path="*" Component={NotFound} />
+            <Route path={ROUTES.PROFILE} Component={Profile} />
           </Routes>
         </Suspense>
       </Router>
